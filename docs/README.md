@@ -69,6 +69,9 @@ spec:
 k get pkg
 
 kubectl crossplane install provider crossplane/provider-jet-aws:v0.5.0 <!-- Line #48 >
+<!-- kubectl crossplane install provider crossplane/provider-aws:v0.29.0
+
+
 
 
 
@@ -88,7 +91,7 @@ kind: Provider
 metadata:
   name: provider-aws
 spec:
-  package: crossplane/provider-jet-aws:main
+  package: crossplane/provider-jet-aws:v0.29.0
 
 --- 
 apiVersion: v1

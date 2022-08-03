@@ -1,3 +1,4 @@
 registry/crossplane/gcp
 registry/crossplane/digital-ocean
 registry/crossplane/jet-aws/providerconfig/providerconfig.yaml
+registry/crossplane/jet-aws/providerconfig/readme.md
