@@ -36,7 +36,7 @@ sudo mv kubectl-crossplane /opt/homebrew/bin
 
 
 # setup your crossplane provider credentials
-
+https://crossplane.io/docs/v1.9/getting-started/install-configure.html#get-aws-account-keyfile
 this needs to become irsa 
 
 ```bash
