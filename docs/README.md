@@ -137,4 +137,4 @@ metadata:
   name: provider-gcp-creds
 type: Opaque
 data:
-  credentials.json: BASE64ENCODED_GCP_PROVIDER_CREDS
+  credentials: BASE64ENCODED_GCP_PROVIDER_CREDS

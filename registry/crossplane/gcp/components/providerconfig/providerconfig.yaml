@@ -10,3 +10,13 @@ spec:
       namespace: crossplane-system
       name: gcp-account-creds
       key: credentials
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: gcp-config
+spec:
+  podSecurityContext:
+    fsGroup: 2000
+  args:
+  - '--debug'
