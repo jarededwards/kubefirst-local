@@ -1,6 +1,6 @@
-apiVersion: gcp.crossplane.io/v1alpha3
-kind: Provider
-metadata:
-  name: provider-gcp
-spec:
-  package: crossplane/provider-gcp:v0.21.0
+# apiVersion: gcp.crossplane.io/v1alpha3
+# kind: Provider
+# metadata:
+#   name: provider-gcp
+# spec:
+#   package: crossplane/provider-gcp:v0.21.0
