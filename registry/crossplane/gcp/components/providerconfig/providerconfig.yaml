@@ -9,7 +9,7 @@ spec:
     secretRef:
       namespace: crossplane-system
       name: provider-gcp-creds
-      key: creds
+      key: credentials
 # ---
 # apiVersion: pkg.crossplane.io/v1alpha1
 # kind: ControllerConfig
