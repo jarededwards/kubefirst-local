@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
     path: registry/crossplane/jet-aws
-    targetRevision: HEAD
+    targetRevision: localhost-experience
   syncPolicy:
     automated:
       prune: true
