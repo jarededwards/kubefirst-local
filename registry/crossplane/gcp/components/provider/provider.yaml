@@ -5,6 +5,8 @@ metadata:
 spec:
   ignoreCrossplaneConstraints: false
   package: crossplane/provider-gcp:v0.21.0
+  controllerConfigRef:
+    name: gcp-config
   packagePullPolicy: IfNotPresent
   revisionActivationPolicy: Automatic
   revisionHistoryLimit: 0

@@ -72,7 +72,8 @@ spec:
 k get pkg
 
 kubectl crossplane install provider crossplane/provider-jet-aws:v0.5.0 <!-- Line #48 >
-<!-- kubectl crossplane install provider crossplane/provider-aws:v0.29.0
+<!-- kubectl crossplane install provider crossplane/provider-aws:v0.29.0 >
+<!-- kubectl crossplane install provider crossplane/provider-gcp:v0.21.0 >
 
 
 
@@ -139,4 +140,4 @@ metadata:
   name: provider-gcp-creds
 type: Opaque
 data:
-  credentials: BASE64ENCODED_GCP_PROVIDER_CREDS
+  credentials: HERE
