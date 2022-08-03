@@ -134,7 +134,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   namespace: crossplane-system
-  name: example-provider-gcp
+  name: provider-gcp-creds
 type: Opaque
 data:
   credentials.json: BASE64ENCODED_GCP_PROVIDER_CREDS

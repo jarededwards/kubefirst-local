@@ -1,14 +1,3 @@
-# ---
-# # GCP Admin service account secret - used by GCP ProviderConfig
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   namespace: crossplane-system
-#   name: provider-gcp
-# type: Opaque
-# data:
-#   credentials.json: <REPLACEME>
----
 # GCP ProviderConfig with service account secret reference
 apiVersion: gcp.crossplane.io/v1beta1
 kind: ProviderConfig
