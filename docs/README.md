@@ -37,6 +37,8 @@ sudo mv kubectl-crossplane /opt/homebrew/bin
 
 # setup your crossplane provider credentials
 
+this needs to become irsa 
+
 ```bash
 ./registry/crossplane/jet-aws/providerconfig/creds.sh
 
