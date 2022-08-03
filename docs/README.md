@@ -39,6 +39,8 @@ sudo mv kubectl-crossplane /opt/homebrew/bin
 https://crossplane.io/docs/v1.9/getting-started/install-configure.html#get-aws-account-keyfile
 this needs to become irsa 
 
+kubectl create secret generic jet-aws-creds -n crossplane-system --from-file=creds=./creds.conf
+
 ```bash
 ./registry/crossplane/jet-aws/providerconfig/creds.sh
 
