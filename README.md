@@ -6,7 +6,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: aws-jet-creds
+  name: jet-aws-creds
   namespace: crossplane-system
 type: Opaque
 data:
@@ -20,7 +20,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      name: aws-jet-creds
+      name: jet-aws-creds
       namespace: crossplane-system
       key: credentials
 ```

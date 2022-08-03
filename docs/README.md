@@ -71,7 +71,7 @@ kubectl crossplane install provider crossplane/provider-jet-aws:v0.5.0 <!-- Line
 
 
 
-
+https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.5.0
 
 
 
@@ -90,7 +90,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: example-aws-jet-creds
+  name: jet-aws-creds
   namespace: crossplane-system
 type: Opaque
 data:
@@ -104,7 +104,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      name: example-aws-jet-creds
+      name: jet-aws-creds
       namespace: crossplane-system
       key: credentials
 --- 
