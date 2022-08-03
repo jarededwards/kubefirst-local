@@ -63,7 +63,6 @@ spec:
   revisionActivationPolicy: Automatic
   revisionHistoryLimit: 0
   skipDependencyResolution: false
-
 ```
 
 k get pkg
@@ -81,6 +80,10 @@ kubectl crossplane install provider crossplane/provider-jet-aws:v0.5.0 <!-- Line
 https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.5.0
 
 
+wave 1 - install cloud provider
+wave 2 - install providerconfig
+
+
 
 
 
@@ -92,6 +95,13 @@ metadata:
   name: provider-aws
 spec:
   package: crossplane/provider-jet-aws:v0.29.0
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp
+spec:
+  package: crossplane/provider-gcp:v0.21.0
 
 --- 
 apiVersion: v1
