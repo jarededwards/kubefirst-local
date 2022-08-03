@@ -1,12 +1,12 @@
-apiVersion: aws.jet.crossplane.io/v1alpha1
-kind: ProviderConfig
-metadata:
-  name: default
-spec:
-  # assumeRoleARN: "arn:aws:iam::126827061464:role/Argo"
-  credentials:
-    source: Secret
-    secretRef:
-      name: jet-aws-creds
-      namespace: crossplane-system
-      key: credentials
+# apiVersion: aws.jet.crossplane.io/v1alpha1
+# kind: ProviderConfig
+# metadata:
+#   name: default
+# spec:
+#   # assumeRoleARN: "arn:aws:iam::126827061464:role/Argo"
+#   credentials:
+#     source: Secret
+#     secretRef:
+#       name: jet-aws-creds
+#       namespace: crossplane-system
+#       key: credentials
