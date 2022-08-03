@@ -3,7 +3,7 @@ kind: ProviderConfig
 metadata:
   name: default
 spec:
-  assumeRoleARN: "arn:aws:iam::126827061464:role/Argo"
+  # assumeRoleARN: "arn:aws:iam::126827061464:role/Argo"
   credentials:
     source: Secret
     secretRef:
