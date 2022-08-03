@@ -11,6 +11,8 @@
 k3d cluster create kubefirst
 ```
 
+kind create cluster --image kindest/node:v1.23.0 --wait 5m --name kubefirst
+
 ## helm install argocd with values yaml 
 
 helm repo add argo https://argoproj.github.io/argo-helm
