@@ -21,7 +21,9 @@ NAME: argocd
 ...
 NOTE: the applicationset controller will not be running and will not impact argocd for this exercise
 
-## register your argocd with the remote gitops repo?
+1. register `registry`
+1. add `gcp-system` (sync-wave 1 == gcp provider install. need secret before sync wave 2. sync-wave 2 == gcp providerconfig install)
+1, 
 
 <!-- kubectl crossplane install configuration registry.upbound.io/xp/getting-started-with-aws:latest -->
 
