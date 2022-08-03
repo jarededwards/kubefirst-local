@@ -1,4 +1,3 @@
-# GCP ProviderConfig with service account secret reference
 apiVersion: gcp.crossplane.io/v1beta1
 kind: ProviderConfig
 metadata:
@@ -9,5 +8,5 @@ spec:
     source: Secret
     secretRef:
       namespace: crossplane-system
-      name: provider-gcp-creds
-      key: credentials.json
+      name: gcp-account-creds
+      key: credentials
