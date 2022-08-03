@@ -1,17 +1,14 @@
-# apiVersion: registry.gcp.crossplane.io/v1alpha1
-# kind: ContainerRegistry
-# metadata:
-#   name: container-registry-test-k1-test
-#   annotations:
-#     # Note that this will be the actual bucket name so it has to be globally unique/available.
-#     crossplane.io/external-name: container-registry-test-k1-test
-# spec:
-#   forProvider:
-#     location: "US"
-#   providerConfigRef:
-#     name: default
-#   deletionPolicy: Delete
----
+apiVersion: registry.gcp.crossplane.io/v1alpha1
+kind: ContainerRegistry
+metadata:
+  name: container-registry-test-k1-test
+spec:
+  forProvider:
+    location: "US"
+  providerConfigRef:
+    name: default
+  deletionPolicy: Delete
+# ---
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
 metadata:
