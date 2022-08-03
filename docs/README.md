@@ -72,7 +72,7 @@ kubectl crossplane install provider crossplane/provider-jet-aws:v0.5.0 <!-- Line
 
 
 
-
+k3d kubeconfig merge mycluster --kubeconfig-merge-default
 
 
 
