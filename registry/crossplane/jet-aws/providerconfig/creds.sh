@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #
+
+# TODO can this be a `curl https://github.com/crossplane-contrib/provider-jet-aws/blob/main/examples/providerconfig/setup.sh | bash`
 # This is a helper script that uses the AWS CLI configuration to construct an
 # JET-AWS ProviderConfig.
 
