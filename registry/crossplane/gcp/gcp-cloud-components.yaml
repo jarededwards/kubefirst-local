@@ -14,8 +14,6 @@ spec:
     repoURL: https://github.com/jarededwards/kubefirst-local
     path: registry/crossplane/gcp/components/cloud
     targetRevision: localhost-experience
-    directory:
-      recurse: true
   syncPolicy:
     automated:
       prune: true
