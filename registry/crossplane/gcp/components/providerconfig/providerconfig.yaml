@@ -10,13 +10,13 @@ spec:
       namespace: crossplane-system
       name: provider-gcp-creds
       key: credentials
-# ---
-# apiVersion: pkg.crossplane.io/v1alpha1
-# kind: ControllerConfig
-# metadata:
-#   name: gcp-config
-# spec:
-#   podSecurityContext:
-#     fsGroup: 2000
-#   args:
-#   - '--debug'
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: gcp-config
+spec:
+  podSecurityContext:
+    fsGroup: 2000
+  args:
+  - '--debug'
