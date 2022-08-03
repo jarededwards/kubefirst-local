@@ -128,3 +128,13 @@ spec:
       key: credentials
 --- 
 
+---
+# GCP Admin service account secret - used by GCP ProviderConfig
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: crossplane-system
+  name: example-provider-gcp
+type: Opaque
+data:
+  credentials.json: BASE64ENCODED_GCP_PROVIDER_CREDS
