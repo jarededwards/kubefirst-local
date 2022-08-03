@@ -1,6 +1,11 @@
-apiVersion: gcp.crossplane.io/v1alpha3
+apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-gcp
+  name: crossplane-provider-gcp
 spec:
+  ignoreCrossplaneConstraints: false
   package: crossplane/provider-gcp:v0.21.0
+  packagePullPolicy: IfNotPresent
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  skipDependencyResolution: false
