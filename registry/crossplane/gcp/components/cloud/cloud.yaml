@@ -1,13 +1,13 @@
-# apiVersion: registry.gcp.crossplane.io/v1alpha1
-# kind: ContainerRegistry
-# metadata:
-#   name: container-registry-test-k1-test
-# spec:
-#   forProvider:
-#     location: "US"
-#   providerConfigRef:
-#     name: default
-#   deletionPolicy: Delete
+apiVersion: registry.gcp.crossplane.io/v1alpha1
+kind: ContainerRegistry
+metadata:
+  name: container-registry-test-k1-test
+spec:
+  forProvider:
+    location: "US"
+  providerConfigRef:
+    name: default
+  deletionPolicy: Delete
 # ---
 apiVersion: compute.gcp.crossplane.io/v1beta1
 kind: Network
