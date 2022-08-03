@@ -1,8 +1,9 @@
 apiVersion: aws.jet.crossplane.io/v1alpha1
 kind: ProviderConfig
 metadata:
-  name: default # todo i.e. atlantis power?
+  name: default
 spec:
+  assumeRoleARN: "arn:aws:iam::126827061464:role/Argo"
   credentials:
     source: Secret
     secretRef:

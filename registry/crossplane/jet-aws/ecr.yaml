@@ -10,5 +10,3 @@ spec:
     imageTagMutability: "IMMUTABLE"
     tags:
       key1: thisrules
-  providerConfigRef:
-    name: default
