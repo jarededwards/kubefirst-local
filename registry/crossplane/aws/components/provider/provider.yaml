@@ -1,0 +1,23 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: crossplane-provider-aws
+spec:
+  ignoreCrossplaneConstraints: false
+  package: crossplane/provider-aws:v0.29.0
+  controllerConfigRef:
+    name: aws-config
+  packagePullPolicy: IfNotPresent
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  skipDependencyResolution: false
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: aws-config
+spec:
+  podSecurityContext:
+    fsGroup: 2000
+  args:
+  - '--debug'
