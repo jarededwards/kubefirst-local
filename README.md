@@ -24,3 +24,38 @@ spec:
       namespace: crossplane-system
       key: credentials
 ```
+
+folder structure
+```bash
+registry
+├── aws-system.yaml
+├── crossplane
+│   ├── aws
+│   │   ├── aws-cloud-components.yaml
+│   │   ├── components
+│   │   │   ├── iam
+│   │   │   ├── ecr
+│   │   │   ├── provider
+│   │   │   │   └── provider.yaml
+│   │   │   ├── providerconfig
+│   │   │   │   └── providerconfig.yaml
+│   │   │   └── vpc
+│   │   ├── provider-aws-components.yaml
+│   │   └── providerconfig-aws-components.yaml
+│   ├── digital-ocean
+│   ├── gcp
+│   │   ├── components
+│   │   │   ├── cloud
+│   │   │   ├── provider
+│   │   │   │   └── provider.yaml
+│   │   │   └── providerconfig
+│   │   │       └── providerconfig.yaml
+│   │   ├── gcp-cloud-components.yaml
+│   │   ├── provider-gcp-components.yaml
+│   │   └── providerconfig-gcp-components.yaml
+│   └── jet-aws
+│   └── jet-gcp
+├── crossplane-system.yaml
+├── gcp-system.yaml
+└── registry.yaml
+```
