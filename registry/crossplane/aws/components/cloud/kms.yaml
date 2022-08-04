@@ -97,7 +97,7 @@ spec:
 apiVersion: kms.aws.crossplane.io/v1alpha1
 kind: Alias
 metadata:
-  name: vault_kubefast
+  name: vault-kubefast
 spec:
   forProvider:
     region: us-east-1
