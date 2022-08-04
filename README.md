@@ -25,7 +25,7 @@ spec:
       key: credentials
 ```
 
-folder structure
+# folder structure
 ```bash
 registry
 ├── aws-system.yaml
