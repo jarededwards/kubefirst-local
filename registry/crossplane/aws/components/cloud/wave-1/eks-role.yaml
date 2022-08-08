@@ -1,3 +1,52 @@
+
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: RolePolicyAttachment
+metadata:
+  name: amazon-eks-worker-node-policy-kubefast
+spec:
+  forProvider:
+    policyArn: arn:aws:iam::aws:policy/AmazonEKSVPCResourceController
+    roleNameRef:
+      name: eks-worker-nodes-role
+  providerConfigRef:
+    name: default
+---
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: RolePolicyAttachment
+metadata:
+  name: amazon-eks-worker-node-policy-kubefast
+spec:
+  forProvider:
+    policyArn: arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+    roleNameRef:
+      name: eks-worker-nodes-role
+  providerConfigRef:
+    name: default
+---
+
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: RolePolicyAttachment
+metadata:
+  name: amazon-eks-worker-node-policy-kubefast
+spec:
+  forProvider:
+    policyArn: arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
+    roleNameRef:
+      name: eks-worker-nodes-role
+  providerConfigRef:
+    name: default
+---
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: RolePolicyAttachment
+metadata:
+  name: amazon-eks-worker-node-policy-kubefast
+spec:
+  forProvider:
+    policyArn: arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+    roleNameRef:
+      name: eks-worker-nodes-role
+  providerConfigRef:
+    name: default
 ---
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: Role
