@@ -9,7 +9,7 @@ spec:
   forProvider:
     region: us-east-1
     clusterNameRef:
-      name: kubefast
+      name: kubefast-xp
     subnetRefs:
       - name: kubefast-public-subnet-1 # todo private
       - name: kubefast-public-subnet-2 # todo private
