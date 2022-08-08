@@ -36,43 +36,43 @@
 #   providerConfigRef:
 #     name: default
 # ---
-# apiVersion: iam.aws.crossplane.io/v1beta1
-# kind: Role
-# metadata:
-#   name: eks-role
-# spec:
-#   forProvider:
-#     assumeRolePolicyDocument: |
-#       {
-#         "Version": "2012-10-17",
-#         "Statement": [
-#             {
-#                 "Effect": "Allow",
-#                 "Principal": {
-#                     "Service": [
-#                         "ec2.amazonaws.com",
-#                         "eks.amazonaws.com",
-#                         "eks-fargate-pods.amazonaws.com",
-#                         "lambda.amazonaws.com",
-#                         "s3.amazonaws.com",
-#                         "rds.amazonaws.com",
-#                         "dax.amazonaws.com"
-#                     ]
-#                 },
-#                 "Action": [
-#                     "sts:AssumeRole"
-#                 ]
-#             }
-#         ]
-#       }
-#     tags:
-#       - key: k1
-#         value: v1
-#       - key: crossplane-kind	#* note: proactively added this tag due to argocd showing a diff
-#         value: role.iam.aws.crossplane.io	
-#       - key: crossplane-name	#* note: proactively added this tag due to argocd showing a diff
-#         value: eks-role	
-#       - key: crossplane-providerconfig	#* note: proactively added this tag due to argocd showing a diff
-#         value: default
-#   providerConfigRef:
-#     name: default
+apiVersion: iam.aws.crossplane.io/v1beta1
+kind: Role
+metadata:
+  name: eks-role
+spec:
+  forProvider:
+    assumeRolePolicyDocument: |
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": [
+                        "ec2.amazonaws.com",
+                        "eks.amazonaws.com",
+                        "eks-fargate-pods.amazonaws.com",
+                        "lambda.amazonaws.com",
+                        "s3.amazonaws.com",
+                        "rds.amazonaws.com",
+                        "dax.amazonaws.com"
+                    ]
+                },
+                "Action": [
+                    "sts:AssumeRole"
+                ]
+            }
+        ]
+      }
+    tags:
+      - key: k1
+        value: v1
+      - key: crossplane-kind	#* note: proactively added this tag due to argocd showing a diff
+        value: role.iam.aws.crossplane.io	
+      - key: crossplane-name	#* note: proactively added this tag due to argocd showing a diff
+        value: eks-role	
+      - key: crossplane-providerconfig	#* note: proactively added this tag due to argocd showing a diff
+        value: default
+  providerConfigRef:
+    name: default
