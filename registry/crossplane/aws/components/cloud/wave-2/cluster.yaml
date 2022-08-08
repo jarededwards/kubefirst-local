@@ -2,27 +2,27 @@
 apiVersion: eks.aws.crossplane.io/v1beta1
 kind: Cluster
 metadata:
-  name: sample-cluster
+  name: kubefirst
   labels:
-    example: "true"
+    cluster: "kubefirst"
+    managed-by: "crossplane"
 spec:
   forProvider:
     region: us-east-1
-    # Defined in examples/iam
     roleArnRef:
-      name: somerole
+      name: eks-role
     resourcesVpcConfig:
       endpointPrivateAccess: true
       endpointPublicAccess: true
-      # Defined in examples/ec2
       subnetIdRefs:
-        - name: sample-subnet1
-        - name: sample-subnet2
+        - name: kubefirst-public-subnet-1 # todo private
+        - name: kubefirst-public-subnet-2 # todo private
+        - name: kubefirst-public-subnet-3 # todo private
       securityGroupIdRefs:
-        - name: sample-cluster-sg
-    version: "1.16"
+        - name: kubefirst-eks-sg
+    version: "1.22"
   writeConnectionSecretToRef:
     name: cluster-conn
-    namespace: default
+    namespace: crossplane-system
   providerConfigRef:
-    name: example
+    name: default

@@ -1,23 +1,23 @@
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: my-group
+  name: kubefirst-workers
   labels:
-    example: "true"
+    cluster: "kubefirst"
 spec:
   forProvider:
     region: us-east-1
     clusterNameRef:
-      name: sample-cluster
-    # Defined in examples/ec2
+      name: kubefirst
     subnetRefs:
-      - name: sample-subnet1
-    # Defined in examples/iam
+      - name: kubefirst-public-subnet-1 # todo private
+      - name: kubefirst-public-subnet-2 # todo private
+      - name: kubefirst-public-subnet-3 # todo private
     nodeRoleRef:
-      name: somenoderole
+      name: eks-worker-nodes-role
     scalingConfig:
       desiredSize: 1
       maxSize: 1
       minSize: 1 
   providerConfigRef:
-    name: example
+    name: default

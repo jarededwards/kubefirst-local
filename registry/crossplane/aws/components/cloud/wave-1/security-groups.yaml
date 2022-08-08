@@ -1,0 +1,21 @@
+apiVersion: ec2.aws.crossplane.io/v1beta1
+kind: SecurityGroup
+metadata:
+  name: kubefirst-eks-sg
+spec:
+  forProvider:
+    region: us-east-1
+    vpcIdRef:
+      name: kubefirst-vpc
+    groupName: kubefirst-eks-sg
+    description: Cluster communication with worker nodes
+    # ignoreIngress: true
+    # ignoreEgress: true
+    ingress:
+      - fromPort: 80
+        toPort: 80
+        ipProtocol: tcp
+        ipRanges:
+          - cidrIp: 10.0.0.0/24
+  providerConfigRef:
+    name: default
