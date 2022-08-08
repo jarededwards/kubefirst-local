@@ -14,7 +14,7 @@ spec:
       - key: Name
         value: kubefirst-vpc-private-us-east-1a
       - key: crossplane-kind	
-        value: vpc.ec2.aws.crossplane.io	
+        value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-1
       - key: crossplane-providerconfig	
@@ -42,7 +42,7 @@ spec:
       - key: Name
         value: kubefirst-vpc-private-us-east-1b
       - key: crossplane-kind	
-        value: vpc.ec2.aws.crossplane.io	
+        value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-2
       - key: crossplane-providerconfig	
@@ -70,7 +70,7 @@ spec:
       - key: Name
         value: kubefirst-vpc-private-us-east-1c
       - key: crossplane-kind	
-        value: vpc.ec2.aws.crossplane.io	
+        value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-3
       - key: crossplane-providerconfig	
