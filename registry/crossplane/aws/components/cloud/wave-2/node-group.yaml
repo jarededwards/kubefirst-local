@@ -14,7 +14,7 @@ spec:
       - name: kubefirst-public-subnet-2 # todo private
       - name: kubefirst-public-subnet-3 # todo private
     nodeRoleRef:
-      name: eks-worker-nodes-role
+      name: eks-worker-nodes-role-kubefast
     scalingConfig:
       desiredSize: 2
       maxSize: 2
