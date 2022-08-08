@@ -11,18 +11,18 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-public-us-east-1a
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-public-subnet-1
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default
 ---
@@ -39,18 +39,18 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-public-us-east-1b
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-public-subnet-2
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default
 ---
@@ -67,17 +67,17 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-public-us-east-1c
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-public-subnet-3
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default

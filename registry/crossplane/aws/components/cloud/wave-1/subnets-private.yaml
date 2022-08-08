@@ -11,18 +11,18 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true # todo remove this line in private subnets
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-private-us-east-1a
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-1
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default
 ---
@@ -39,18 +39,18 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true # todo remove this line in private subnets
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-private-us-east-1b
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-2
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default
 ---
@@ -67,17 +67,17 @@ spec:
       name: kubefast-vpc
     mapPublicIPOnLaunch: true # todo remove this line in private subnets
     tags:
+      - key: ClusterName
+        value: kubefast
       - key: Name
         value: kubefirst-vpc-private-us-east-1c
+      - key: ProvisionedBy
+        value: kubefirst
       - key: crossplane-kind	
         value: subnet.ec2.aws.crossplane.io	
       - key: crossplane-name	
         value: kubefast-private-subnet-3
       - key: crossplane-providerconfig	
         value: default
-      - key: ClusterName
-        value: kubefast
-      - key: ProvisionedBy
-        value: kubefirst
   providerConfigRef:
     name: default
