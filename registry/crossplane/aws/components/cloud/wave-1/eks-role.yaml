@@ -39,7 +39,7 @@
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: Role
 metadata:
-  name: eks-role
+  name: eks-role-kubefast
 spec:
   forProvider:
     assumeRolePolicyDocument: |
