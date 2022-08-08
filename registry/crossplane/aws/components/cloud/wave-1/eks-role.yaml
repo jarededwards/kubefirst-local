@@ -26,7 +26,7 @@
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: AmazonEKSClusterPolicy-kubefast
+  name: amazon-eks-cluster-policy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
