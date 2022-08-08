@@ -1,7 +1,7 @@
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: kubefast-workers
+  name: kubefast-workers-2
   labels:
     cluster: "kubefast"
 spec:
@@ -21,12 +21,12 @@ spec:
       maxSize: 2
       minSize: 2 
   providerConfigRef:
-    name: default
+    name: default    
 ---
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: kubefast-workers-2
+  name: kubefast-workers-3
   labels:
     cluster: "kubefast"
 spec:
