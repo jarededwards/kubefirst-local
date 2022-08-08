@@ -50,11 +50,11 @@ spec:
       - key: ClusterName
         value: kubefast
       - key: Name
-        value: kubefirst-vpc-public-us-east-1a
+        value: kubefast-workers-4
       - key: ProvisionedBy
         value: kubefirst
       - key: crossplane-kind
-        value: subnet.ec2.aws.crossplane.io
+        value: eks.aws.crossplane.io
       - key: crossplane-name
         value: kubefast-public-subnet-1
       - key: crossplane-providerconfig
