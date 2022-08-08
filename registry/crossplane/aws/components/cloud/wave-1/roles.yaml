@@ -31,6 +31,12 @@ spec:
     tags:
       - key: k1
         value: v1
+      - key: crossplane-kind	
+        value: role.iam.aws.crossplane.io	
+      - key: crossplane-name	
+        value: eks-role	
+      - key: crossplane-providerconfig	
+        value: default
   providerConfigRef:
     name: default
 ---
@@ -60,5 +66,11 @@ spec:
     tags:
       - key: k2
         value: v2
+      - key: crossplane-kind	
+        value: role.iam.aws.crossplane.io	
+      - key: crossplane-name	
+        value: eks-worker-nodes-role	
+      - key: crossplane-providerconfig	
+        value: default
   providerConfigRef:
     name: default
