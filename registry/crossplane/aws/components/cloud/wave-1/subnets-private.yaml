@@ -23,10 +23,10 @@ spec:
         value: kubefast-private-subnet-1
       - key: crossplane-providerconfig
         value: default
-      - key: kubernetes.io/role/elb
-        value: '1'
       - key: kubernetes.io/cluster/kubefast
         value: shared
+      - key: kubernetes.io/role/elb
+        value: '1'
   providerConfigRef:
     name: default
 ---
@@ -55,10 +55,10 @@ spec:
         value: kubefast-private-subnet-2
       - key: crossplane-providerconfig
         value: default
-      - key: kubernetes.io/role/elb
-        value: '1'
       - key: kubernetes.io/cluster/kubefast
         value: shared
+      - key: kubernetes.io/role/elb
+        value: '1'
   providerConfigRef:
     name: default
 ---
@@ -87,9 +87,9 @@ spec:
         value: kubefast-private-subnet-3
       - key: crossplane-providerconfig
         value: default
-      - key: kubernetes.io/role/elb
-        value: '1'
       - key: kubernetes.io/cluster/kubefast
         value: shared
+      - key: kubernetes.io/role/elb
+        value: '1'
   providerConfigRef:
     name: default
