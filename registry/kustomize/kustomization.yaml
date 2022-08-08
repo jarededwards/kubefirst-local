@@ -7,3 +7,5 @@ resources:
 
 # patchesStrategicMerge:
 # - overlays/custom-cidr.yaml
+
+suffix: kubefast

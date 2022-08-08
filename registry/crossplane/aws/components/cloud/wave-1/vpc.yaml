@@ -18,5 +18,9 @@ spec:
         value: kubefast-vpc	
       - key: crossplane-providerconfig	
         value: default
+      - key: ClusterName
+        value: kubefast
+      - key: ProvisionedBy
+        value: kubefirst
   providerConfigRef:
     name: default
