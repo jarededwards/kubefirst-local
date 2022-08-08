@@ -1,7 +1,8 @@
+
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: kubefast-workers-2
+  name: kubefast-workers-3
   labels:
     cluster: "kubefast"
 spec:
@@ -26,7 +27,7 @@ spec:
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: kubefast-workers-3
+  name: kubefast-workers-4
   labels:
     cluster: "kubefast"
 spec:
@@ -45,5 +46,22 @@ spec:
       desiredSize: 2
       maxSize: 2
       minSize: 2 
+    tags:
+      - key: ClusterName
+        value: kubefast
+      - key: Name
+        value: kubefirst-vpc-public-us-east-1a
+      - key: ProvisionedBy
+        value: kubefirst
+      - key: crossplane-kind
+        value: subnet.ec2.aws.crossplane.io
+      - key: crossplane-name
+        value: kubefast-public-subnet-1
+      - key: crossplane-providerconfig
+        value: default
+      - key: k8s.io/cluster-autoscaler/kubefast
+        value: owned
+      - key: kubernetes.io/cluster/kubefast
+        value: owned
   providerConfigRef:
     name: default    
