@@ -16,8 +16,8 @@ spec:
     nodeRoleRef:
       name: eks-worker-nodes-role
     scalingConfig:
-      desiredSize: 1
-      maxSize: 1
-      minSize: 1 
+      desiredSize: 2
+      maxSize: 2
+      minSize: 2 
   providerConfigRef:
     name: default

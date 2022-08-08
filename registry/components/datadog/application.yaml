@@ -1,0 +1,6 @@
+--datadog-api-key=laksjsdflksjdlk
+
+datadog:
+  enabled: true
+  apikey: laksjsdflksjdlk
+

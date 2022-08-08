@@ -31,46 +31,11 @@ spec:
     tags:
       - key: k1
         value: v1
-      - key: crossplane-kind	
+      - key: crossplane-kind	#* note: proactively added this tag due to argocd showing a diff
         value: role.iam.aws.crossplane.io	
-      - key: crossplane-name	
+      - key: crossplane-name	#* note: proactively added this tag due to argocd showing a diff
         value: eks-role	
-      - key: crossplane-providerconfig	
-        value: default
-  providerConfigRef:
-    name: default
----
-apiVersion: iam.aws.crossplane.io/v1beta1
-kind: Role
-metadata:
-  name: eks-worker-nodes-role
-spec:
-  forProvider:
-    assumeRolePolicyDocument: |
-      {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Principal": {
-                    "Service": [
-                        "ec2.amazonaws.com"
-                    ]
-                },
-                "Action": [
-                    "sts:AssumeRole"
-                ]
-            }
-        ]
-      }
-    tags:
-      - key: k2
-        value: v2
-      - key: crossplane-kind	
-        value: role.iam.aws.crossplane.io	
-      - key: crossplane-name	
-        value: eks-worker-nodes-role	
-      - key: crossplane-providerconfig	
+      - key: crossplane-providerconfig	#* note: proactively added this tag due to argocd showing a diff
         value: default
   providerConfigRef:
     name: default
