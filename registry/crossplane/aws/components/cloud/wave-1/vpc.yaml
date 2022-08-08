@@ -9,5 +9,8 @@ spec:
     enableDnsSupport: true
     enableDnsHostNames: true
     instanceTenancy: default
+    tags:
+      - key: Name
+        value: kubefast-vpc
   providerConfigRef:
     name: default
