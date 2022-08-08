@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  password: B64_ENCODED_GITHUB_ACCESS_TOKEN==
+  url: B64_ENCODED_GITHUB_OWNER_OR_ORGANIZATION== # github.com/jarededwards
+  username: a3ViZWZpcnN0LWxvY2Fs
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+  name: kubefirst-local-creds
+  namespace: argocd
+type: Opaque
