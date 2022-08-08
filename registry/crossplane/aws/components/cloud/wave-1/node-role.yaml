@@ -1,7 +1,7 @@
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-worker-node-policy-kubefast
+  name: AmazonEKSWorkerNodePolicy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
@@ -13,7 +13,7 @@ spec:
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-ec2-container-registry-readonly-kubefast
+  name: AmazonEC2ContainerRegistryReadOnly-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
@@ -25,7 +25,7 @@ spec:
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-cni-attach-kubefast
+  name: AmazonEKS_CNI_Policy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy

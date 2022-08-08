@@ -2,7 +2,7 @@
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-worker-node-policy-kubefast
+  name: AmazonEKSVPCResourceController-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSVPCResourceController
@@ -14,7 +14,7 @@ spec:
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-worker-node-policy-kubefast
+  name:AmazonEKSServicePolicy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSServicePolicy
@@ -27,7 +27,7 @@ spec:
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-worker-node-policy-kubefast
+  name: AmazonEKSClusterPolicy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
@@ -39,7 +39,7 @@ spec:
 apiVersion: iam.aws.crossplane.io/v1beta1
 kind: RolePolicyAttachment
 metadata:
-  name: amazon-eks-worker-node-policy-kubefast
+  name: AmazonEKSWorkerNodePolicy-kubefast
 spec:
   forProvider:
     policyArn: arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
