@@ -11,9 +11,9 @@ spec:
     clusterNameRef:
       name: kubefast
     subnetRefs:
-      - name: kubefirst-public-subnet-1 # todo private
-      - name: kubefirst-public-subnet-2 # todo private
-      - name: kubefirst-public-subnet-3 # todo private
+      - name: kubefast-public-subnet-1 # todo private
+      - name: kubefast-public-subnet-2 # todo private
+      - name: kubefast-public-subnet-3 # todo private
     nodeRoleRef:
       name: eks-worker-nodes-role-kubefast-kubefast
     scalingConfig:

@@ -89,7 +89,7 @@ spec:
       }
     region: us-east-1
     tags:
-    - tagKey: kubefirst-vault-kms
+    - tagKey: kubefast-vault-kms
       tagValue: v1
     - tagKey: cluster-name
       tagValue: kubefast

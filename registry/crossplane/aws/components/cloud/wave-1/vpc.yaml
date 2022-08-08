@@ -1,7 +1,7 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
-  name: kubefirst-vpc
+  name: kubefast-vpc
 spec:
   forProvider:
     region: us-east-1

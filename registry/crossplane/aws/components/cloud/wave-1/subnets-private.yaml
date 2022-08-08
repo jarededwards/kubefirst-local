@@ -1,14 +1,14 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: kubefirst-private-subnet-1
+  name: kubefast-private-subnet-1
 spec:
   forProvider:
     region: us-east-1
     availabilityZone: us-east-1a
     cidrBlock: 10.0.1.0/24
     vpcIdRef:
-      name: kubefirst-vpc
+      name: kubefast-vpc
     mapPublicIPOnLaunch: true
   providerConfigRef:
     name: default
@@ -16,14 +16,14 @@ spec:
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: kubefirst-private-subnet-2
+  name: kubefast-private-subnet-2
 spec:
   forProvider:
     region: us-east-1
     availabilityZone: us-east-1b
     cidrBlock: 10.0.2.0/24
     vpcIdRef:
-      name: kubefirst-vpc
+      name: kubefast-vpc
     mapPublicIPOnLaunch: true
   providerConfigRef:
     name: default
@@ -31,14 +31,14 @@ spec:
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: kubefirst-private-subnet-3
+  name: kubefast-private-subnet-3
 spec:
   forProvider:
     region: us-east-1
     availabilityZone: us-east-1c
     cidrBlock: 10.0.3.0/24
     vpcIdRef:
-      name: kubefirst-vpc
+      name: kubefast-vpc
     mapPublicIPOnLaunch: true
   providerConfigRef:
     name: default
