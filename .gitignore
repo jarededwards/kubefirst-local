@@ -1,4 +1,6 @@
 registry/crossplane/digital-ocean
 registry/crossplane/jet-aws/providerconfig/providerconfig.yaml
 registry/crossplane/jet-aws/providerconfig/readme.md
+registry/crossplane/jet-aws/providerconfig/readme.md
+registry/argocd-connectivity/connection.yaml
 credential*

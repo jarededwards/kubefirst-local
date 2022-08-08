@@ -12,3 +12,18 @@ metadata:
   name: kubefirst-local-creds
   namespace: argocd
 type: Opaque
+---
+apiVersion: v1
+data:
+  project: ZGVmYXVsdA== # default
+  type: Z2l0 # git
+  url: B64_ENCODED_GITHUB_OWNER_OR_ORGANIZATION== # github.com/jarededwards
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: kubefirst-repo
+  namespace: argocd
+type: Opaque
