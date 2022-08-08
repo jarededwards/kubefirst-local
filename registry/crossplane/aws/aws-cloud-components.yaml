@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
     path: registry/crossplane/aws/components/cloud
-    targetRevision: localhost-experience
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true

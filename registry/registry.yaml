@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: 'https://github.com/jarededwards/kubefirst-local'
     path: registry
-    targetRevision: localhost-experience
+    targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
