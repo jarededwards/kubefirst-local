@@ -61,9 +61,9 @@ spec:
       - key: k2
         value: v2
       - key: crossplane-kind	#* note: proactively added this tag due to argocd showing a diff
-        value: role.iam.aws.crossplane.io	
+        value: role.iam.aws.crossplane.io
       - key: crossplane-name	#* note: proactively added this tag due to argocd showing a diff
-        value: eks-worker-nodes-role-kubefast	
+        value: eks-worker-nodes-role-kubefast
       - key: crossplane-providerconfig	#* note: proactively added this tag due to argocd showing a diff
         value: default
   providerConfigRef:

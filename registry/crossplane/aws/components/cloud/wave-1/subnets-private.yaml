@@ -17,12 +17,16 @@ spec:
         value: kubefirst-vpc-private-us-east-1a
       - key: ProvisionedBy
         value: kubefirst
-      - key: crossplane-kind	
-        value: subnet.ec2.aws.crossplane.io	
-      - key: crossplane-name	
+      - key: crossplane-kind
+        value: subnet.ec2.aws.crossplane.io
+      - key: crossplane-name
         value: kubefast-private-subnet-1
-      - key: crossplane-providerconfig	
+      - key: crossplane-providerconfig
         value: default
+      - key: kubernetes.io/role/elb
+        value: 1
+      - key: kubernetes.io/cluster/kubefast
+        value: shared
   providerConfigRef:
     name: default
 ---
@@ -45,12 +49,16 @@ spec:
         value: kubefirst-vpc-private-us-east-1b
       - key: ProvisionedBy
         value: kubefirst
-      - key: crossplane-kind	
-        value: subnet.ec2.aws.crossplane.io	
-      - key: crossplane-name	
+      - key: crossplane-kind
+        value: subnet.ec2.aws.crossplane.io
+      - key: crossplane-name
         value: kubefast-private-subnet-2
-      - key: crossplane-providerconfig	
+      - key: crossplane-providerconfig
         value: default
+      - key: kubernetes.io/role/elb
+        value: 1
+      - key: kubernetes.io/cluster/kubefast
+        value: shared
   providerConfigRef:
     name: default
 ---
@@ -73,11 +81,15 @@ spec:
         value: kubefirst-vpc-private-us-east-1c
       - key: ProvisionedBy
         value: kubefirst
-      - key: crossplane-kind	
-        value: subnet.ec2.aws.crossplane.io	
-      - key: crossplane-name	
+      - key: crossplane-kind
+        value: subnet.ec2.aws.crossplane.io
+      - key: crossplane-name
         value: kubefast-private-subnet-3
-      - key: crossplane-providerconfig	
+      - key: crossplane-providerconfig
         value: default
+      - key: kubernetes.io/role/elb
+        value: 1
+      - key: kubernetes.io/cluster/kubefast
+        value: shared
   providerConfigRef:
     name: default

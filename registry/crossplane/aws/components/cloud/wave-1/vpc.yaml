@@ -16,11 +16,11 @@ spec:
         value: kubefast-vpc
       - key: ProvisionedBy
         value: kubefirst
-      - key: crossplane-kind	
-        value: vpc.ec2.aws.crossplane.io	
-      - key: crossplane-name	
-        value: kubefast-vpc	
-      - key: crossplane-providerconfig	
+      - key: crossplane-kind
+        value: vpc.ec2.aws.crossplane.io
+      - key: crossplane-name
+        value: kubefast-vpc
+      - key: crossplane-providerconfig
         value: default
   providerConfigRef:
     name: default
