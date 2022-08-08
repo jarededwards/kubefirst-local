@@ -2,11 +2,12 @@
 apiVersion: eks.aws.crossplane.io/v1beta1
 kind: Cluster
 metadata:
-  name: kubefirst
+  name: kubefast
   labels:
-    cluster: "kubefirst"
+    cluster: "kubefast"
     managed-by: "crossplane"
 spec:
+  deletionPolicy: Orphan
   forProvider:
     region: us-east-1
     roleArnRef:

@@ -1,14 +1,15 @@
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
-  name: kubefirst-workers
+  name: kubefast-workers
   labels:
-    cluster: "kubefirst"
+    cluster: "kubefast"
 spec:
+  deletionPolicy: Orphan
   forProvider:
     region: us-east-1
     clusterNameRef:
-      name: kubefirst
+      name: kubefast
     subnetRefs:
       - name: kubefirst-public-subnet-1 # todo private
       - name: kubefirst-public-subnet-2 # todo private
