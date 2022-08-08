@@ -5,7 +5,7 @@ metadata:
   labels:
     cluster: "kubefast"
 spec:
-  deletionPolicy: Orphan
+  deletionPolicy: Delete # Orphan
   forProvider:
     region: us-east-1
     clusterNameRef:
@@ -15,7 +15,7 @@ spec:
       - name: kubefast-public-subnet-2 # todo private
       - name: kubefast-public-subnet-3 # todo private
     nodeRoleRef:
-      name: eks-worker-nodes-role-kubefast-kubefast
+      name: eks-worker-nodes-role-kubefast
     scalingConfig:
       desiredSize: 2
       maxSize: 2

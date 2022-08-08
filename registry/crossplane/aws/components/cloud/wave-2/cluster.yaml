@@ -2,16 +2,16 @@
 apiVersion: eks.aws.crossplane.io/v1beta1
 kind: Cluster
 metadata:
-  name: kubefast
+  name: kubefast-xp
   labels:
     cluster: "kubefast"
     managed-by: "crossplane"
 spec:
-  deletionPolicy: Orphan
+  deletionPolicy: Delete # Orphan
   forProvider:
     region: us-east-1
     roleArnRef:
-      name: eks-role
+      name: eks-role-kubefast
     resourcesVpcConfig:
       endpointPrivateAccess: true
       endpointPublicAccess: true
