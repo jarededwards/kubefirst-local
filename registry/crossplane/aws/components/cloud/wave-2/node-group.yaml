@@ -1,4 +1,3 @@
-
 apiVersion: eks.aws.crossplane.io/v1alpha1
 kind: NodeGroup
 metadata:
@@ -23,45 +22,45 @@ spec:
       minSize: 2 
   providerConfigRef:
     name: default    
----
-apiVersion: eks.aws.crossplane.io/v1alpha1
-kind: NodeGroup
-metadata:
-  name: kubefast-workers-4
-  labels:
-    cluster: "kubefast"
-spec:
-  deletionPolicy: Delete # Orphan
-  forProvider:
-    region: us-east-1
-    clusterNameRef:
-      name: kubefast-xp
-    subnetRefs:
-      - name: kubefast-public-subnet-1 # todo private
-      - name: kubefast-public-subnet-2 # todo private
-      - name: kubefast-public-subnet-3 # todo private
-    nodeRoleRef:
-      name: eks-worker-nodes-role-kubefast
-    scalingConfig:
-      desiredSize: 2
-      maxSize: 2
-      minSize: 2 
-    tags:
-      - key: ClusterName
-        value: kubefast
-      - key: Name
-        value: kubefast-workers-4
-      - key: ProvisionedBy
-        value: kubefirst
-      - key: crossplane-kind
-        value: eks.aws.crossplane.io
-      - key: crossplane-name
-        value: kubefast-public-subnet-1
-      - key: crossplane-providerconfig
-        value: default
-      - key: k8s.io/cluster-autoscaler/kubefast
-        value: owned
-      - key: kubernetes.io/cluster/kubefast
-        value: owned
-  providerConfigRef:
-    name: default    
+# ---
+# apiVersion: eks.aws.crossplane.io/v1alpha1
+# kind: NodeGroup
+# metadata:
+#   name: kubefast-workers-4
+#   labels:
+#     cluster: "kubefast"
+# spec:
+#   deletionPolicy: Delete # Orphan
+#   forProvider:
+#     region: us-east-1
+#     clusterNameRef:
+#       name: kubefast-xp
+#     subnetRefs:
+#       - name: kubefast-public-subnet-1 # todo private
+#       - name: kubefast-public-subnet-2 # todo private
+#       - name: kubefast-public-subnet-3 # todo private
+#     nodeRoleRef:
+#       name: eks-worker-nodes-role-kubefast
+#     scalingConfig:
+#       desiredSize: 2
+#       maxSize: 2
+#       minSize: 2 
+#     tags:
+#       - key: ClusterName
+#         value: kubefast
+#       - key: Name
+#         value: kubefast-workers-4
+#       - key: ProvisionedBy
+#         value: kubefirst
+#       - key: crossplane-kind
+#         value: eks.aws.crossplane.io
+#       - key: crossplane-name
+#         value: kubefast-public-subnet-1
+#       - key: crossplane-providerconfig
+#         value: default
+#       # - key: k8s.io/cluster-autoscaler/kubefast
+#       #   value: owned
+#       - key: kubernetes.io/cluster/kubefast
+#         value: owned
+#   providerConfigRef:
+#     name: default    
