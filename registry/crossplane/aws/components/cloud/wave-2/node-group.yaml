@@ -46,6 +46,12 @@ spec:
       maxSize: 2
       minSize: 2 
     tags:
+      - key: aws:eks:cluster-name
+        value: kubefast
+      - key: eks:cluster-name
+        value: kubefast
+      - key: eks:nodegroup-name
+        value: kubefast-workers-4
       - key: Name
         value: kubefast-workers-4
       - key: ProvisionedBy
