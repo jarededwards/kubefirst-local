@@ -358,7 +358,7 @@ controller:
 ## Dex
 dex:
   # -- Enable dex
-  enabled: true
+  enabled: false
   # -- Dex name
   name: dex-server
 
@@ -1862,6 +1862,7 @@ openshift:
   enabled: false
 
 applicationSet:
+  enabled: false  #! modified
   # -- Application Set controller name string
   name: applicationset-controller
 
@@ -2062,6 +2063,7 @@ applicationSet:
         #     - argocd-applicationset.example.com
 
 notifications:
+  enabled: false  #! modified
   # -- Notifications controller name string
   name: notifications-controller
 
