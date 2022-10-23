@@ -4,14 +4,11 @@
 
 ## create a local k8s cluster
 
-
 [https://k3d.io/v5.3.0](https://k3d.io/v5.3.0)
 
 ```bash
-k3d cluster create kubefirst
+k3d cluster create kubefirst --agents 3 --agents-memory 1024m 
 ```
-
-kind create cluster --image kindest/node:v1.23.0 --wait 5m --name kubefirst
 
 ## helm install argocd with values yaml 
 
