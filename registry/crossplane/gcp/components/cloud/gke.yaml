@@ -18,6 +18,8 @@ spec:
     #     enabled: true
     networkRef:
       name: kubefirst
+    workloadIdentityConfig:
+      workloadPool: kubefirst-cli.svc.id.goog
   writeConnectionSecretToRef:
     namespace: default
     name: gke-conn
@@ -57,5 +59,3 @@ spec:
     initialNodeCount: 3
     locations:
       - "us-central1-a"
-    workloadIdentityConfig:
-      workloadPool: kubefirst-cli.svc.id.goog
