@@ -17,6 +17,10 @@ spec:
     helm:
       releaseName: external-dns
       values: |
+        serviceAccount:
+          create: true
+          annotations:
+            iam.gke.io/gcp-service-account: external-dns@kubefirst-cli.iam.gserviceaccount.com
         domainFilters:
           - kubefirst.dev
         provider: google
