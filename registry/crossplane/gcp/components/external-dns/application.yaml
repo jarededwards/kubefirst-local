@@ -20,6 +20,7 @@ spec:
         domainFilters:
           - kubefirst.dev
         provider: gcp
+        google: 
           project: kubefirst-cli
   syncPolicy:
     automated:
