@@ -59,3 +59,5 @@ spec:
     initialNodeCount: 3
     locations:
       - "us-central1-a"
+    workloadMetadataConfig:
+      mode: GKE_METADATA
