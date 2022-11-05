@@ -56,8 +56,8 @@ spec:
       - "https://www.googleapis.com/auth/trace.append"      
       - "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
       # "https://www.googleapis.com/auth/cloud-platform", # todo - did this help?
+      workloadMetadataConfig:
+        mode: GKE_METADATA
     initialNodeCount: 3
     locations:
       - "us-central1-a"
-    workloadMetadataConfig:
-      mode: GKE_METADATA
