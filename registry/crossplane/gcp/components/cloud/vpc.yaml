@@ -9,4 +9,4 @@
 #     routingConfig:
 #       routingMode: REGIONAL
 #   providerConfigRef:
-#     name: example
+#     name: default

@@ -3,7 +3,7 @@ kind: ProviderConfig
 metadata:
   name: default
 spec:
-  projectID: nebulous-oss
+  projectID: kubefirst-cli
   credentials:
     source: Secret
     secretRef:
