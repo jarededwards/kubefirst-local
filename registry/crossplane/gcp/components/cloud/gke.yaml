@@ -57,3 +57,5 @@ spec:
     initialNodeCount: 3
     locations:
       - "us-central1-a"
+    workloadIdentityConfig:
+      workloadPool: kubefirst-cli.svc.id.goog
