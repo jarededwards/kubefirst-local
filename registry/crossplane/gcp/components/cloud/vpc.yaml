@@ -1,0 +1,12 @@
+# ---
+# apiVersion: compute.gcp.crossplane.io/v1beta1
+# kind: Network
+# metadata:
+#   name: kubefirst
+# spec:
+#   forProvider:
+#     autoCreateSubnetworks: true
+#     routingConfig:
+#       routingMode: REGIONAL
+#   providerConfigRef:
+#     name: example
