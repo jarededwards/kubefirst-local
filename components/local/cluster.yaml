@@ -32,7 +32,7 @@ spec:
       - https://www.googleapis.com/auth/trace.append"     
       - https://www.googleapis.com/auth/ndev.clouddns.readwrite
       workloadMetadataConfig:
-        mode: GKE_METADATA
+        - mode: GKE_METADATA
       preemptible: true
       # serviceAccountSelector:
       #   matchLabels:
