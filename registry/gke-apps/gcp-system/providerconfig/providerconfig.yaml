@@ -1,0 +1,15 @@
+apiVersion: gcp.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  # todo, this should be gcp project specific
+  # maybe kubefirst-cli-platform and create a different 
+  # provider with lesser permissions for ecr / app related resources
+  name: default
+spec:
+  projectID: kubefirst-cli
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: provider-gcp-creds
+      key: credentials
