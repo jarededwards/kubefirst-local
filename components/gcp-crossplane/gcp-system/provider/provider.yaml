@@ -1,0 +1,30 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: crossplane-provider-gcp
+spec:
+  ignoreCrossplaneConstraints: false
+  package: crossplane/provider-gcp:v0.21.0
+  controllerConfigRef:
+    name: gcp-config
+  packagePullPolicy: IfNotPresent
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  skipDependencyResolution: false
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: gcp-config
+spec:
+  podSecurityContext:
+    fsGroup: 2000
+  args:
+  - '--debug'
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp
+spec:
+  package: xpkg.upbound.io/upbound/provider-gcp:v0.16.0

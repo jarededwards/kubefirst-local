@@ -1,0 +1,76 @@
+# apiVersion: container.gcp.upbound.io/v1beta1
+# kind: NodePool
+# metadata:
+#   annotations:
+#     meta.upbound.io/example-id: container/v1beta1/nodepool
+#   labels:
+#     testing.upbound.io/example-name: nodepool
+#   name: nodepool
+# spec:
+#   forProvider:
+#     autoscaling:
+#       autoprovisioned: false
+#       enabled: true
+#       maxNodeCount: 5
+#       minNodeCount: 3 
+#     clusterRef:
+#       name: kubefirst
+#     nodeConfig:
+#     - machineType: n1-standard-1
+#       diskSizeGb: 40
+#       diskType: pd-ssd
+#       imageType: cos_containerd
+#       labels:
+#         managed-by: crossplane
+#       oauthScopes:
+#       - https://www.googleapis.com/auth/cloud-platform
+#       - https://www.googleapis.com/auth/devstorage.read_only
+#       - https://www.googleapis.com/auth/logging.write
+#       - https://www.googleapis.com/auth/monitoring
+#       - https://www.googleapis.com/auth/servicecontrol
+#       - https://www.googleapis.com/auth/service.management.readonly
+#       - https://www.googleapis.com/auth/trace.append"     
+#       - https://www.googleapis.com/auth/ndev.clouddns.readwrite
+#       workloadMetadataConfig:
+#         mode: GKE_METADATA
+#       preemptible: true
+#       # serviceAccountSelector:
+#       #   matchLabels:
+#       #     testing.upbound.io/example-name: nodepool
+#     # nodeCount: 1
+#     initialNodeCount: 3
+#     locations:
+#       - "us-central1-a"
+# ---
+# apiVersion: container.gcp.upbound.io/v1beta1
+# kind: Cluster
+# metadata:
+#   annotations:
+#     meta.upbound.io/example-id: container/v1beta1/cluster
+#   labels:
+#     testing.upbound.io/example-name: k1-nodepool
+#   name: k1-nodepool
+# spec:
+#   forProvider:
+#     initialClusterVersion: "1.23"
+#     location: us-central1-a
+#     removeDefaultNodePool: true
+#     networkRef:
+#       name: kubefirst
+#     workloadIdentityConfig:
+#       workloadPool: kubefirst-cli.svc.id.goog
+#   writeConnectionSecretToRef:
+#     namespace: default
+#     name: gke-conn
+# ---
+# # apiVersion: cloudplatform.gcp.upbound.io/v1beta1
+# # kind: ServiceAccount
+# # metadata:
+# #   annotations:
+# #     meta.upbound.io/example-id: container/v1beta1/nodepool
+# #   labels:
+# #     testing.upbound.io/example-name: nodepool
+# #   name: nodepool
+# # spec:
+# #   forProvider:
+# #     displayName: Service Account for GKE Cluster

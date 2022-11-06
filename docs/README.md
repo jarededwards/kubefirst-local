@@ -191,3 +191,17 @@ as well as a GCP network, gke cluster, and nodepool to migrate the workload to t
 # steps 5-7
 [](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity)
 [](https://medium.com/zeotap-customer-intelligence-unleashed/gke-workload-identity-a-secure-way-for-gke-applications-to-access-gcp-services-f880f4e74e8c)
+
+
+
+
+# new lease on life
+
+- k3d create cluster
+- helm install local argocd values
+- register crossplane
+- check that provider is from upbound now
+- register gcp system FOR UPBOUND
+- new network resource
+- new cluster resource
+- new node pool
