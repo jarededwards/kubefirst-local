@@ -8,11 +8,11 @@ metadata:
   name: kubefirst-nodepool
 spec:
   forProvider:
-    autoscaling:
-      autoprovisioned: false
-      enabled: true
-      maxNodeCount: 5
-      minNodeCount: 3 
+    # autoscaling:
+    #   autoprovisioned: false
+    #   enabled: true
+    #   maxNodeCount: 5
+    #   minNodeCount: 3 
     clusterRef:
       name: kubefirst
     nodeConfig:
@@ -37,8 +37,8 @@ spec:
       # serviceAccountSelector:
       #   matchLabels:
       #     testing.upbound.io/example-name: nodepool
-    # nodeCount: 1
-    initialNodeCount: 3
+    nodeCount: 4
+    # initialNodeCount: 3
     locations:
       - "us-central1-a"
   providerConfigRef:
@@ -59,7 +59,7 @@ spec:
     networkRef:
       name: kubefirst
     workloadIdentityConfig:
-      workloadPool: kubefirst-cli.svc.id.goog
+      - workloadPool: kubefirst-cli.svc.id.goog
   writeConnectionSecretToRef:
     namespace: default
     name: gke-conn
