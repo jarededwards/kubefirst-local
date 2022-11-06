@@ -9,8 +9,8 @@ metadata:
 spec:
   forProvider:
     autoscaling:
-      maxNodeCount: 5
-      minNodeCount: 3 
+      - maxNodeCount: 5
+      - minNodeCount: 3 
     clusterRef:
       name: kubefirst
     nodeConfig:
