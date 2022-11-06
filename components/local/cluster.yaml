@@ -5,7 +5,7 @@ metadata:
     meta.upbound.io/example-id: container/v1beta1/nodepool
   labels:
     testing.upbound.io/example-name: nodepool
-  name: nodepool
+  name: kubefirst-nodepool
 spec:
   forProvider:
     autoscaling:
@@ -51,7 +51,7 @@ metadata:
     meta.upbound.io/example-id: container/v1beta1/cluster
   labels:
     testing.upbound.io/example-name: k1-nodepool
-  name: k1-nodepool
+  name: kubefirst
 spec:
   forProvider:
     initialClusterVersion: "1.23"
