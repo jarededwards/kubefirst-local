@@ -1,63 +1,63 @@
-apiVersion: container.gcp.crossplane.io/v1beta2
-kind: Cluster
-metadata:
-  name: kubefirst
-spec:
-  forProvider:
-    initialClusterVersion: "1.23"
-    location: us-central1
-    # autoscaling:
-    #   autoprovisioningNodePoolDefaults:
-    #     serviceAccount: sa-test
-    # networkConfig:
-    #   enableIntraNodeVisibility: true
-    # loggingService: logging.googleapis.com/kubernetes
-    # monitoringService: monitoring.googleapis.com/kubernetes
-    # addonsConfig:
-    #   gcePersistentDiskCsiDriverConfig:
-    #     enabled: true
-    networkRef:
-      name: kubefirst
-    workloadIdentityConfig:
-      workloadPool: kubefirst-cli.svc.id.goog
-  writeConnectionSecretToRef:
-    namespace: default
-    name: gke-conn
----
-apiVersion: container.gcp.crossplane.io/v1beta1
-kind: NodePool
-metadata:
-  name: kubefirst-np
-spec:
-  forProvider:
-    autoscaling:
-      autoprovisioned: false
-      enabled: true
-      maxNodeCount: 5
-      minNodeCount: 3 
-    clusterRef:
-      name: kubefirst
-    config:
-      # serviceAccount: sa-test
-      machineType: n1-standard-1
-      # sandboxConfig:
-      #   type: gvisor
-      diskSizeGb: 40
-      diskType: pd-ssd
-      imageType: cos_containerd
-      labels:
-        test-label: crossplane-created
-      oauthScopes:
-      - "https://www.googleapis.com/auth/devstorage.read_only"
-      - "https://www.googleapis.com/auth/logging.write"
-      - "https://www.googleapis.com/auth/monitoring"
-      - "https://www.googleapis.com/auth/servicecontrol"
-      - "https://www.googleapis.com/auth/service.management.readonly"
-      - "https://www.googleapis.com/auth/trace.append"      
-      - "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-      # "https://www.googleapis.com/auth/cloud-platform", # todo - did this help?
-      workloadMetadataConfig:
-        mode: GKE_METADATA
-    initialNodeCount: 3
-    locations:
-      - "us-central1-a"
+# apiVersion: container.gcp.crossplane.io/v1beta2
+# kind: Cluster
+# metadata:
+#   name: kubefirst
+# spec:
+#   forProvider:
+#     initialClusterVersion: "1.23"
+#     location: us-central1
+#     # autoscaling:
+#     #   autoprovisioningNodePoolDefaults:
+#     #     serviceAccount: sa-test
+#     # networkConfig:
+#     #   enableIntraNodeVisibility: true
+#     # loggingService: logging.googleapis.com/kubernetes
+#     # monitoringService: monitoring.googleapis.com/kubernetes
+#     # addonsConfig:
+#     #   gcePersistentDiskCsiDriverConfig:
+#     #     enabled: true
+#     networkRef:
+#       name: kubefirst
+#     workloadIdentityConfig:
+#       workloadPool: kubefirst-cli.svc.id.goog
+#   writeConnectionSecretToRef:
+#     namespace: default
+#     name: gke-conn
+# ---
+# apiVersion: container.gcp.crossplane.io/v1beta1
+# kind: NodePool
+# metadata:
+#   name: kubefirst-np
+# spec:
+#   forProvider:
+#     autoscaling:
+#       autoprovisioned: false
+#       enabled: true
+#       maxNodeCount: 5
+#       minNodeCount: 3 
+#     clusterRef:
+#       name: kubefirst
+#     config:
+#       # serviceAccount: sa-test
+#       machineType: n1-standard-1
+#       # sandboxConfig:
+#       #   type: gvisor
+#       diskSizeGb: 40
+#       diskType: pd-ssd
+#       imageType: cos_containerd
+#       labels:
+#         test-label: crossplane-created
+#       oauthScopes:
+#       - "https://www.googleapis.com/auth/devstorage.read_only"
+#       - "https://www.googleapis.com/auth/logging.write"
+#       - "https://www.googleapis.com/auth/monitoring"
+#       - "https://www.googleapis.com/auth/servicecontrol"
+#       - "https://www.googleapis.com/auth/service.management.readonly"
+#       - "https://www.googleapis.com/auth/trace.append"      
+#       - "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+#       # "https://www.googleapis.com/auth/cloud-platform", # todo - did this help?
+#       workloadMetadataConfig:
+#         mode: GKE_METADATA
+#     initialNodeCount: 3
+#     locations:
+#       - "us-central1-a"
