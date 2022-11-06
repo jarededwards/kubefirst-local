@@ -8,11 +8,11 @@ metadata:
   name: kubefirst-nodepool
 spec:
   forProvider:
-    # autoscaling:
-    #   autoprovisioned: false
-    #   enabled: true
-    #   maxNodeCount: 5
-    #   minNodeCount: 3 
+    # clusterAutoscaling:
+    #   - autoprovisioned: false
+    #     enabled: true
+    #     maxNodeCount: 5
+    #     minNodeCount: 3 
     clusterRef:
       name: kubefirst
     nodeConfig:
@@ -37,7 +37,7 @@ spec:
       # serviceAccountSelector:
       #   matchLabels:
       #     testing.upbound.io/example-name: nodepool
-    nodeCount: 4
+    # nodeCount: 4
     initialNodeCount: 4
   providerConfigRef:
     name: gcp-provider
