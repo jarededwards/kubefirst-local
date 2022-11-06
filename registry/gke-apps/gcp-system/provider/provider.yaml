@@ -25,10 +25,10 @@ spec:
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: crossplane-provider-gcp-get-preview
+  name: crossplane-provider-gcp-get-preview # todo jet not get
 spec:
   ignoreCrossplaneConstraints: false
-  package: crossplane/provider-jet-gcp@v0.3.0-preview
+  package: crossplane/provider-jet-gcp:v0.3.0-preview
   # controllerConfigRef:
   #   name: gcp-config
   packagePullPolicy: IfNotPresent
