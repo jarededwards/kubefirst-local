@@ -12,4 +12,4 @@ spec:
     autoCreateSubnetworks: false
     routingMode: REGIONAL
   providerConfigRef:
-    name: kubefirst-cli-provider
+    name: gcp-provider
