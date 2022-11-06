@@ -53,6 +53,7 @@ spec:
   forProvider:
     location: us-central1-a
     removeDefaultNodePool: true
+    initialNodeCount:1
     networkRef:
       name: kubefirst
     workloadIdentityConfig:
