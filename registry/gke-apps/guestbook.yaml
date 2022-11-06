@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "120"
+spec:
+  project: default
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  source:
+    repoURL: 'https://github.com/argoproj/argocd-example-apps'
+    path: helm-guestbook
+    targetRevision: HEAD
+    helm:
+      values: |-
+        ingress:
+          enabled: true
+          annotations:
+            kubernetes.io/ingress.class: nginx
+            cert-manager.io/cluster-issuer: "letsencrypt-prod"
+          path: /
+          host: guestbook.kubefirst.dev
+          tls:
+           - secretName: atlantis-tls
+             hosts:
+               - guestbook.kubefirst.dev
