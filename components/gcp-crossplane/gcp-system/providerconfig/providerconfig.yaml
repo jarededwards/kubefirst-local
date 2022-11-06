@@ -4,7 +4,7 @@ metadata:
   # todo, this should be gcp project specific
   # maybe kubefirst-cli-platform and create a different 
   # provider with lesser permissions for ecr / app related resources
-  name: gcp-provider
+  name: kubefirst-cli-provider
 spec:
   projectID: kubefirst-cli
   credentials:
