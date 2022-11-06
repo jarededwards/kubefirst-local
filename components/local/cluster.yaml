@@ -39,8 +39,6 @@ spec:
       #     testing.upbound.io/example-name: nodepool
     nodeCount: 4
     # initialNodeCount: 3
-    locations:
-      - "us-central1-a"
   providerConfigRef:
     name: gcp-provider
 ---
