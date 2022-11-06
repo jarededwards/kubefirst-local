@@ -25,13 +25,6 @@ spec:
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: crossplane-provider-gcp-jet-preview
+  name: provider-gcp
 spec:
-  ignoreCrossplaneConstraints: false
-  package: crossplane/provider-jet-gcp:v0.3.0-preview
-  # controllerConfigRef:
-  #   name: gcp-config
-  packagePullPolicy: IfNotPresent
-  revisionActivationPolicy: Automatic
-  revisionHistoryLimit: 0
-  skipDependencyResolution: false
+  package: xpkg.upbound.io/upbound/provider-gcp:v0.16.0
