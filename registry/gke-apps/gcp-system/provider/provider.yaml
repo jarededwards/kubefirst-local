@@ -21,3 +21,17 @@ spec:
     fsGroup: 2000
   args:
   - '--debug'
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: crossplane-provider-gcp-get-preview
+spec:
+  ignoreCrossplaneConstraints: false
+  package: crossplane/provider-jet-gcp@v0.3.0-preview
+  # controllerConfigRef:
+  #   name: gcp-config
+  packagePullPolicy: IfNotPresent
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  skipDependencyResolution: false
