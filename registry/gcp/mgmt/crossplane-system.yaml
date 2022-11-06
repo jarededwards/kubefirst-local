@@ -3,19 +3,17 @@ kind: Application
 metadata:
   name: crossplane-system
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
-    namespace: crossplane-system
+    namespace: argocd
   source:
-    repoURL: https://charts.crossplane.io/stable
-    chart: crossplane
-    targetRevision: 1.9.0
+    repoURL: https://github.com/jarededwards/kubefirst-local
+    path: components/gcp/crossplane-system
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
