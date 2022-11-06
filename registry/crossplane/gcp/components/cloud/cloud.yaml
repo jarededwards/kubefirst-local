@@ -9,7 +9,7 @@
 #   forProvider:
 #     location: "US"
 #   providerConfigRef:
-#     name: default
+#     name: kube
 #   deletionPolicy: Delete
 # ---
 # apiVersion: compute.gcp.crossplane.io/v1beta1
@@ -22,7 +22,7 @@
 #     routingConfig:
 #       routingMode: REGIONAL
 #   providerConfigRef:
-#     name: default
+#     name: kube
 # ---
 # apiVersion: storage.gcp.crossplane.io/v1alpha3
 # kind: Bucket
@@ -37,5 +37,5 @@
 #   location: US
 #   storageClass: STANDARD
 #   providerConfigRef:
-#     name: default
+#     name: kube
 #   deletionPolicy: Delete
