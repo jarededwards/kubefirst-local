@@ -8,5 +8,5 @@
 #     source: Secret
 #     secretRef:
 #       name: jet-aws-creds
-#       namespace: crossplane-system
+#       namespace: upbound-system
 #       key: credentials

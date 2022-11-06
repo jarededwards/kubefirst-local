@@ -7,7 +7,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: jet-aws-creds
-  namespace: crossplane-system
+  namespace: upbound-system
 type: Opaque
 data:
   credentials: <REPLACEME> #! do not change the <REPLACEME> token.
@@ -21,7 +21,7 @@ spec:
     source: Secret
     secretRef:
       name: jet-aws-creds
-      namespace: crossplane-system
+      namespace: upbound-system
       key: credentials
 ```
 
@@ -55,7 +55,7 @@ registry
 │   │   └── providerconfig-gcp-components.yaml
 │   └── jet-aws
 │   └── jet-gcp
-├── crossplane-system.yaml
+├── upbound-system.yaml
 ├── gcp-system.yaml
 └── registry.yaml
 ```

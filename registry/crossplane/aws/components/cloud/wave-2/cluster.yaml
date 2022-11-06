@@ -24,6 +24,6 @@ spec:
     version: "1.22"
   writeConnectionSecretToRef:
     name: cluster-conn
-    namespace: crossplane-system
+    namespace: upbound-system
   providerConfigRef:
     name: default

@@ -40,7 +40,7 @@ sudo mv kubectl-crossplane /opt/homebrew/bin
 [aws-creds](https://crossplane.io/docs/v1.9/getting-started/install-configure.html#get-aws-account-keyfile)   
 <!-- todo this needs to become irsa  -->
 
-kubectl create secret generic jet-aws-creds -n crossplane-system --from-file=creds=./creds.conf
+kubectl create secret generic jet-aws-creds -n upbound-system --from-file=creds=./creds.conf
 
 ```bash
 ./registry/crossplane/jet-aws/providerconfig/creds.sh
@@ -110,7 +110,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: jet-aws-creds
-  namespace: crossplane-system
+  namespace: upbound-system
 type: Opaque
 data:
   credentials: <REPLACEME>
@@ -124,7 +124,7 @@ spec:
     source: Secret
     secretRef:
       name: jet-aws-creds
-      namespace: crossplane-system
+      namespace: upbound-system
       key: credentials
 --- 
 
@@ -133,7 +133,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  namespace: crossplane-system
+  namespace: upbound-system
   name: provider-gcp-creds
 type: Opaque
 data:

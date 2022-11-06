@@ -4,12 +4,12 @@ metadata:
   name: registry
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
-    path: components/local
+    path: components/upbound-system
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

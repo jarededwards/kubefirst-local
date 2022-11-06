@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-system
+  name: upbound-system
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "10"
@@ -12,7 +12,7 @@ spec:
     namespace: argocd
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
-    path: components/gcp/crossplane-system
+    path: components/gcp/upbound-system
     targetRevision: HEAD
   syncPolicy:
     automated:

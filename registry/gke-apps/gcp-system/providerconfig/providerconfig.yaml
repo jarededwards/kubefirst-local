@@ -10,7 +10,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: upbound-system
       name: provider-gcp-creds
       key: credentials
 ---
@@ -23,6 +23,6 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: crossplane-system
+      namespace: upbound-system
       name: provider-gcp-creds
       key: credentials
