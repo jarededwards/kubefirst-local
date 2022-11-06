@@ -18,6 +18,11 @@ spec:
         controller:
           publishService:
             enabled: true
+          service:
+            internal:
+              enabled: true
+              annotations:
+                networking.gke.io/load-balancer-type: "Internal"          
           extraArgs:
             enable-ssl-passthrough: true
     chart: ingress-nginx
