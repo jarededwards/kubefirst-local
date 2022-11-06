@@ -54,7 +54,6 @@ metadata:
   name: kubefirst
 spec:
   forProvider:
-    initialClusterVersion: "1.23"
     location: us-central1-a
     removeDefaultNodePool: true
     networkRef:
