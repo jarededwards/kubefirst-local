@@ -38,7 +38,7 @@ spec:
       #   matchLabels:
       #     testing.upbound.io/example-name: nodepool
     nodeCount: 4
-    # initialNodeCount: 3
+    initialNodeCount: 4
   providerConfigRef:
     name: gcp-provider
 ---
