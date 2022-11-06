@@ -1,12 +1,12 @@
-apiVersion: gcp.crossplane.io/v1beta1
-kind: ProviderConfig
-metadata:
-  name: default # todo, this should be gcp project specific 
-spec:
-  projectID: kubefirst-cli
-  credentials:
-    source: Secret
-    secretRef:
-      namespace: crossplane-system
-      name: provider-gcp-creds
-      key: credentials
+# apiVersion: gcp.crossplane.io/v1beta1
+# kind: ProviderConfig
+# metadata:
+#   name: default # todo, this should be gcp project specific
+# spec:
+#   projectID: kubefirst-cli
+#   credentials:
+#     source: Secret
+#     secretRef:
+#       namespace: crossplane-system
+#       name: provider-gcp-creds
+#       key: credentials
