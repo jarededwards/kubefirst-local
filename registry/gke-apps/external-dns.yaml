@@ -4,12 +4,12 @@ metadata:
   name: external-dns-components
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "40"
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
-    path: registry/crossplane/gcp/components/external-dns # todo probably remove /crossplane/ from here
+    path: registry/gke-apps/external-dns # todo how to architect our yaml
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

@@ -809,8 +809,8 @@ server:
     imagePullPolicy: "" # IfNotPresent
 
   # -- Additional command line arguments to pass to Argo CD server
-  extraArgs: []
-  #  - --insecure
+  extraArgs:
+   - --insecure
 
   # This flag is used to either remove or pass the CLI flag --staticassets /shared/app to the Argo CD server app
   staticAssets:
@@ -1206,32 +1206,33 @@ server:
   # -- Deploy Argo CD Applications within this helm release
   # @default -- `[]` (See [values.yaml])
   ## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/
-  additionalApplications: []
-  # - name: guestbook
+  # additionalApplications:
+  # - name: registry
   #   namespace: argocd
   #   additionalLabels: {}
   #   additionalAnnotations: {}
   #   finalizers:
   #   - resources-finalizer.argocd.argoproj.io
-  #   project: guestbook
+  #   project: default
   #   source:
-  #     repoURL: https://github.com/argoproj/argocd-example-apps.git
+  #     repoURL: https://github.com/jarededwards/gitops
   #     targetRevision: HEAD
-  #     path: guestbook
-  #     directory:
-  #       recurse: true
+  #     path: registry
   #   destination:
   #     server: https://kubernetes.default.svc
-  #     namespace: guestbook
+  #     namespace: argocd
   #   syncPolicy:
   #     automated:
-  #       prune: false
-  #       selfHeal: false
-  #   ignoreDifferences:
-  #   - group: apps
-  #     kind: Deployment
-  #     jsonPointers:
-  #     - /spec/replicas
+  #       prune: true
+  #       selfHeal: true
+  #     syncOptions:
+  #     - CreateNamespace=true
+  #     retry:
+  #       limit: 5
+  #       backoff:
+  #         duration: 5s
+  #         maxDuration: 5m0s
+  #         factor: 2
   #   info:
   #   - name: url
   #     value: https://argoproj.github.io/
