@@ -50,7 +50,7 @@ metadata:
   annotations:
     meta.upbound.io/example-id: container/v1beta1/cluster
   labels:
-    testing.upbound.io/example-name: k1-nodepool
+    testing.upbound.io/example-name: kubefirst
   name: kubefirst
 spec:
   forProvider:
