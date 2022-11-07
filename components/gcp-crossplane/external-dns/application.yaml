@@ -1,34 +1,34 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: external-dns
-  namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "20"
-spec:
-  project: default
-  destination:
-    namespace: external-dns
-    server: https://kubernetes.default.svc
-  source:
-    chart: external-dns
-    repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 6.5.4
-    helm:
-      releaseName: external-dns
-      values: |
-        serviceAccount:
-          create: true
-          annotations:
-            iam.gke.io/gcp-service-account: external-dns@kubefirst-cli.iam.gserviceaccount.com
-        domainFilters:
-          - kubefirst.dev
-        provider: google
-        google: 
-          project: kubefirst-cli
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: external-dns
+#   namespace: argocd
+#   annotations:
+#     argocd.argoproj.io/sync-wave: "20"
+# spec:
+#   project: default
+#   destination:
+#     namespace: external-dns
+#     server: https://kubernetes.default.svc
+#   source:
+#     chart: external-dns
+#     repoURL: https://charts.bitnami.com/bitnami
+#     targetRevision: 6.5.4
+#     helm:
+#       releaseName: external-dns
+#       values: |
+#         serviceAccount:
+#           create: true
+#           annotations:
+#             iam.gke.io/gcp-service-account: external-dns@kubefirst-cli.iam.gserviceaccount.com
+#         domainFilters:
+#           - kubefirst.dev
+#         provider: google
+#         google: 
+#           project: kubefirst-cli
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
