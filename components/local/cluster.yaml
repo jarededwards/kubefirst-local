@@ -40,29 +40,29 @@ spec:
   providerConfigRef:
     name: gcp-provider
 ---
-apiVersion: container.gcp.upbound.io/v1beta1
-kind: Cluster
-metadata:
-  annotations:
-    meta.upbound.io/example-id: container/v1beta1/cluster
-  labels:
-    testing.upbound.io/example-name: kubefirst
-  name: kubefirst
-spec:
-  forProvider:
-    location: us-central1-a
-    removeDefaultNodePool: true
-    initialNodeCount: 2
-    networkRef:
-      name: kubefirst
-    workloadIdentityConfig:
-      - workloadPool: kubefirst-cli.svc.id.goog
-  writeConnectionSecretToRef:
-    namespace: default
-    name: gke-conn
-  providerConfigRef:
-    name: gcp-provider
----
+# apiVersion: container.gcp.upbound.io/v1beta1
+# kind: Cluster
+# metadata:
+#   annotations:
+#     meta.upbound.io/example-id: container/v1beta1/cluster
+#   labels:
+#     testing.upbound.io/example-name: kubefirst
+#   name: kubefirst
+# spec:
+#   forProvider:
+#     location: us-central1-a
+#     removeDefaultNodePool: true
+#     initialNodeCount: 2
+#     networkRef:
+#       name: kubefirst
+#     workloadIdentityConfig:
+#       - workloadPool: kubefirst-cli.svc.id.goog
+#   writeConnectionSecretToRef:
+#     namespace: default
+#     name: gke-conn
+#   providerConfigRef:
+#     name: gcp-provider
+# ---
 # apiVersion: cloudplatform.gcp.upbound.io/v1beta1
 # kind: ServiceAccount
 # metadata:
