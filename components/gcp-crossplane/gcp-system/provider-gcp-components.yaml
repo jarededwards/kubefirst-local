@@ -9,7 +9,7 @@ spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: upbound-system
   source:
     repoURL: https://github.com/jarededwards/kubefirst-local
     path: registry/gke-apps/gcp-system/provider
