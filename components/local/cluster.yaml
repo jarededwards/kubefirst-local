@@ -1,67 +1,67 @@
-# apiVersion: container.gcp.upbound.io/v1beta1
-# kind: NodePool
-# metadata:
-#   annotations:
-#     meta.upbound.io/example-id: container/v1beta1/nodepool
-#   labels:
-#     testing.upbound.io/example-name: nodepool
-#   name: kubefirst-nodepool
-# spec:
-#   forProvider:
-#     autoscaling:
-#       - maxNodeCount: 5
-#         minNodeCount: 3
-#     clusterRef:
-#       name: kubefirst
-#     nodeConfig:
-#     - machineType: n1-standard-4
-#       diskSizeGb: 40
-#       diskType: pd-ssd
-#       imageType: cos_containerd
-#       labels:
-#         managed-by: crossplane
-#       # SEE CRD DOCS FOR SERVICE ACCOUNT
-#       oauthScopes:
-#       - https://www.googleapis.com/auth/cloud-platform
-#       - https://www.googleapis.com/auth/devstorage.read_only
-#       - https://www.googleapis.com/auth/logging.write
-#       - https://www.googleapis.com/auth/monitoring
-#       - https://www.googleapis.com/auth/servicecontrol
-#       - https://www.googleapis.com/auth/service.management.readonly  
-#       - https://www.googleapis.com/auth/ndev.clouddns.readwrite
-#       workloadMetadataConfig:
-#         - mode: GKE_METADATA
-#       preemptible: true
-#       # serviceAccountSelector:
-#       #   matchLabels:
-#       #     testing.upbound.io/example-name: nodepool
-#     # nodeCount: 4
-#     initialNodeCount: 3
-#   providerConfigRef:
-#     name: gcp-provider
-# ---
-# apiVersion: container.gcp.upbound.io/v1beta1
-# kind: Cluster
-# metadata:
-#   annotations:
-#     meta.upbound.io/example-id: container/v1beta1/cluster
-#   labels:
-#     testing.upbound.io/example-name: kubefirst
-#   name: kubefirst
-# spec:
-#   forProvider:
-#     location: us-central1-a
-#     removeDefaultNodePool: true
-#     initialNodeCount: 2
-#     networkRef:
-#       name: kubefirst
-#     workloadIdentityConfig:
-#       - workloadPool: kubefirst-cli.svc.id.goog
-#   writeConnectionSecretToRef:
-#     namespace: default
-#     name: gke-conn
-#   providerConfigRef:
-#     name: gcp-provider
+apiVersion: container.gcp.upbound.io/v1beta1
+kind: NodePool
+metadata:
+  annotations:
+    meta.upbound.io/example-id: container/v1beta1/nodepool
+  labels:
+    testing.upbound.io/example-name: nodepool
+  name: kubefirst-nodepool
+spec:
+  forProvider:
+    autoscaling:
+      - maxNodeCount: 5
+        minNodeCount: 3
+    clusterRef:
+      name: kubefirst
+    nodeConfig:
+    - machineType: n1-standard-4
+      diskSizeGb: 40
+      diskType: pd-ssd
+      imageType: cos_containerd
+      labels:
+        managed-by: crossplane
+      # SEE CRD DOCS FOR SERVICE ACCOUNT
+      oauthScopes:
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/devstorage.read_only
+      - https://www.googleapis.com/auth/logging.write
+      - https://www.googleapis.com/auth/monitoring
+      - https://www.googleapis.com/auth/servicecontrol
+      - https://www.googleapis.com/auth/service.management.readonly  
+      - https://www.googleapis.com/auth/ndev.clouddns.readwrite
+      workloadMetadataConfig:
+        - mode: GKE_METADATA
+      preemptible: true
+      # serviceAccountSelector:
+      #   matchLabels:
+      #     testing.upbound.io/example-name: nodepool
+    # nodeCount: 4
+    initialNodeCount: 3
+  providerConfigRef:
+    name: gcp-provider
+---
+apiVersion: container.gcp.upbound.io/v1beta1
+kind: Cluster
+metadata:
+  annotations:
+    meta.upbound.io/example-id: container/v1beta1/cluster
+  labels:
+    testing.upbound.io/example-name: kubefirst
+  name: kubefirst
+spec:
+  forProvider:
+    location: us-central1-a
+    removeDefaultNodePool: true
+    initialNodeCount: 2
+    networkRef:
+      name: kubefirst
+    workloadIdentityConfig:
+      - workloadPool: kubefirst-cli.svc.id.goog
+  writeConnectionSecretToRef:
+    namespace: default
+    name: gke-conn
+  providerConfigRef:
+    name: gcp-provider
 # ---
 # apiVersion: cloudplatform.gcp.upbound.io/v1beta1
 # kind: ServiceAccount
